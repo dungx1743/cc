@@ -78,20 +78,6 @@ NameTextLabel = GuiLibrary.TextLabel({
 	TextScaled = true,
 	Parent = MainFrame
 })
-AntiAfkButton = GuiLibrary.TextButton({
-	Name = RandomNameFunction(),
-	BackgroundColor3 = Color3.new(0, 0.666667, 1),
-	BorderColor3 = Color3.new(0, 0, 0),
-	BorderSizePixel = 2,
-	Position = UDim2.new(0.1, 0, 0.125, 0),
-	Size = UDim2.new(0.8, 0, 0.125, 0),
-	["Font"] = Enum.Font.FredokaOne,
-	Text = "Anti afk",
-	ZIndex = 2,
-	TextColor3 = Color3.new(1, 1, 1),
-	TextScaled = true,
-	Parent = MainFrame
-})
 StartAutofarmButton = GuiLibrary.TextButton({
 	Name = RandomNameFunction(),
 	BackgroundColor3 = Color3.new(0, 0.666667, 1),
@@ -165,40 +151,6 @@ OpenAutofarmGui = GuiLibrary.TextButton({
 	Visible = false,
 	Parent = MainGui
 })
-
---from infinity yield lol
-AntiAfkState = false
-function AntiAFK()
-	local GC = getconnections or get_signal_cons
-	if GC then
-		for i,v in pairs(GC(Player.Idled)) do
-			if v["Disable"] then
-				v["Disable"](v)
-			elseif v["Disconnect"] then
-				v["Disconnect"](v)
-			end
-		end
-	else
-		local VirtualUser = cloneref(game:GetService("VirtualUser"))
-		Players.LocalPlayer.Idled:Connect(function()
-			VirtualUser:CaptureController()
-			VirtualUser:ClickButton2(Vector2.new())
-		end)
-	end
-end
-
---yeah yeah this button do nothing, you cant turn off anti afk
-function AntiAFKButton()
-	if not AntiAfkState then
-		AntiAfkState = true
-		AntiAfkButton.TextColor3 = Color3.new(0, 1, 0)
-		AntiAFK()
-	else
-		AntiAfkState = false
-		AntiAfkButton.TextColor3 = Color3.new(1, 1, 1)
-	end
-end
-
 AutofarmStarted = true
 function StartAutofarmButtonC()
 	if not AutofarmStarted then
@@ -386,7 +338,6 @@ Players.PlayerAdded:Connect(function(player1)
 end)
 
 --Buttons connections
-AntiAfkButton.MouseButton1Click:Connect(AntiAFKButton)
 ImproveFPSButton.MouseButton1Click:Connect(ImproveFPSButtonC)
 StartAutofarmButton.MouseButton1Click:Connect(StartAutofarmButtonC)
 Disable3DRenderingButton.MouseButton1Click:Connect(Disabl3dRender)
