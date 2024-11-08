@@ -5,7 +5,7 @@ local player = Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
 
 -- Variable to track if teleportation is enabled
-local teleportEnabled = true
+local teleportEnabled = false
 
 -- Function to find the CoinContainer
 local function findCoinContainer()
@@ -156,5 +156,5 @@ RunService.Heartbeat:Connect(function()
         teleportToNearbyOrRandomCoin()
     end
 end)
-
+local teleportEnabled = true
 print("MM2 Candy Auto Farm script with persistent GUI and fixed toggle loaded.")
