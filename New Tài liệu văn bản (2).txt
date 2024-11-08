@@ -41,7 +41,7 @@ end
 -- Function to teleport to a coin
 local function teleportToCoin(coin)
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-    local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
     local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = coin.CFrame})
     tween:Play()
     return tween
@@ -53,7 +53,7 @@ local isTeleporting = false
 -- Function to teleport to a nearby coin or a random coin
 local function teleportToNearbyOrRandomCoin()
     if not teleportEnabled or isTeleporting then return end
-    local nearbyRadius = 30 -- Adjust this value to change the "nearby" distance
+    local nearbyRadius = 50 -- Adjust this value to change the "nearby" distance
     local nearbyCoin = findNearestCoin(nearbyRadius)
     if nearbyCoin then
         print("Teleporting to nearby coin")
