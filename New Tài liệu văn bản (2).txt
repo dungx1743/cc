@@ -36,9 +36,9 @@ local slider = Instance.new("TextButton", sliderFrame)
 slider.Size = UDim2.new(1, 0, 1, 0)
 slider.Text = "Speed: 2"
 
-local speedValue = 2
-local autoFarmEnabled = false
-local noclipEnabled = false
+local speedValue = 5
+local autoFarmEnabled = true
+local noclipEnabled = true
 local mapFirstCoinCollected = {}
 
 local configFolder = workspace:FindFirstChild("AutoFarmConfig")
