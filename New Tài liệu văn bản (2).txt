@@ -41,7 +41,7 @@ end
 -- Function to teleport to a coin
 local function teleportToCoin(coin)
     local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
-    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local tweenInfo = TweenInfo.new(2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
     local tween = TweenService:Create(humanoidRootPart, tweenInfo, {CFrame = coin.CFrame})
     tween:Play()
     return tween
