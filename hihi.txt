@@ -7,7 +7,7 @@ while true do
         player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
     end
     
-    wait(1)
+    wait()
     local args = {
         [1] = {
             [1] = {
@@ -18,14 +18,15 @@ while true do
         }
     }
     game:GetService("ReplicatedStorage").NetworkingContainer.DataRemote:FireServer(unpack(args))
+        wait(2)
+    local player = game.Players.LocalPlayer
 
-    wait(1)
     if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
         local teleportPosition = Vector3.new(-650, 246, -511)
         player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
     end
     
-    wait(1)
+    wait()
     local args = {
         [1] = {
             [1] = {
@@ -35,14 +36,14 @@ while true do
             }
         }
     }
-    
-    wait(1)
+    game:GetService("ReplicatedStorage").NetworkingContainer.DataRemote:FireServer(unpack(args))
+       wait(2)
     if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
         local teleportPosition = Vector3.new(-650, 246, -400)
         player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
     end
     
-    wait(1)
+    wait()
     local args = {
         [1] = {
             [1] = {
@@ -52,14 +53,14 @@ while true do
             }
         }
     }
-    
-    wait(1)
+    game:GetService("ReplicatedStorage").NetworkingContainer.DataRemote:FireServer(unpack(args))
+       wait(2)
     if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
         local teleportPosition = Vector3.new(-650, 270, 280)
         player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
     end
     
-    wait(1)
+    wait()
     local args = {
         [1] = {
             [1] = {
@@ -69,14 +70,14 @@ while true do
             }
         }
     }
-    
-    wait(1)
+    game:GetService("ReplicatedStorage").NetworkingContainer.DataRemote:FireServer(unpack(args))
+       wait(2)
     if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
         local teleportPosition = Vector3.new(-650, 246, 100)
         player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
     end
     
-    wait(1)
+    wait()
     local args = {
         [1] = {
             [1] = {
@@ -86,38 +87,5 @@ while true do
             }
         }
     }
-    
-    wait(1)
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        local teleportPosition = Vector3.new(-550, 246, 50)
-        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
-    end
-    
-    wait(1)
-    local args = {
-        [1] = {
-            [1] = {
-                [1] = "\226\129\130^",
-                [2] = "acd40cccfcd94692920f",
-                [3] = 8
-            }
-        }
-    }
-    
-    wait(1)
-    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
-        local teleportPosition = Vector3.new(-700, 246, 50)
-        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
-    end
-    
-    wait(1)
-    local args = {
-        [1] = {
-            [1] = {
-                [1] = "\226\129\130^",
-                [2] = "acd40cccfcd94692920f",
-                [3] = 8
-            }
-        }
-    }
+    game:GetService("ReplicatedStorage").NetworkingContainer.DataRemote:FireServer(unpack(args))
 end
