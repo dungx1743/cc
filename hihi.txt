@@ -1,0 +1,128 @@
+
+Để tạo một vòng lặp vô tận (infinite loop) cho đoạn mã của bạn, bạn có thể sử dụng while true do để liên tục thực hiện các hành động. Đây là phiên bản đã chỉnh sửa với vòng lặp vô tận:
+
+lua
+Sao chép mã
+while true do
+    wait(3)
+    local player = game.Players.LocalPlayer
+
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(0, 0, 0)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+    game:GetService("ReplicatedStorage").NetworkingContainer.DataRemote:FireServer(unpack(args))
+
+    wait(1)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(-650, 246, -511)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+    
+    wait(1)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(-650, 246, -400)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+    
+    wait(1)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(-650, 270, 280)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+    
+    wait(1)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(-650, 246, 100)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+    
+    wait(1)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(-550, 246, 50)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+    
+    wait(1)
+    if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        local teleportPosition = Vector3.new(-700, 246, 50)
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(teleportPosition)
+    end
+    
+    wait(1)
+    local args = {
+        [1] = {
+            [1] = {
+                [1] = "\226\129\130^",
+                [2] = "acd40cccfcd94692920f",
+                [3] = 8
+            }
+        }
+    }
+end
