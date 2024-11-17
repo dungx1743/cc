@@ -1,8 +1,3 @@
-
-Để tạo một vòng lặp vô tận (infinite loop) cho đoạn mã của bạn, bạn có thể sử dụng while true do để liên tục thực hiện các hành động. Đây là phiên bản đã chỉnh sửa với vòng lặp vô tận:
-
-lua
-Sao chép mã
 while true do
     wait(3)
     local player = game.Players.LocalPlayer
